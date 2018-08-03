@@ -17,6 +17,8 @@ const currentDog = {
 
 var health = 100
 
+const dogHealth = document.getElementById('health')
+
 function scratchEar() {
   health--;
   if (currentDog.scratchEar % currentDog.health == 0) {
