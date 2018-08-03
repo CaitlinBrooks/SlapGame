@@ -22,4 +22,7 @@ function scratchEar() {
   if (currentDog.scratchEar % currentDog.tolerance == 0) {
     currentDog.moodIndex--
   }
+  return alert(health)
 }
+
+scratchEar();
