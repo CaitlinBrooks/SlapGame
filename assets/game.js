@@ -6,8 +6,8 @@ const currentDog = {
     'Zoomies'
   ],
   moodImgs: [
-    'assets/',
-    'assets/madcat.jpg',
+    'assets/BlackDog.jpg',
+    'assets/DogZoomies',
     ""
   ],
   tolerance: 5,
