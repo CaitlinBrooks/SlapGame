@@ -18,8 +18,8 @@ const currentDog = {
 var health = 100
 
 function scratchEar() {
-  currentDog.pets--;
-  if (currentDog.pets % currentDog.tolerance == 0) {
+  currentDog.scratchEar--;
+  if (currentDog.scratchEar % currentDog.tolerance == 0) {
     currentDog.moodIndex--
   }
 }
