@@ -1,4 +1,4 @@
-const currentDog = {
+let currentDog = {
   name: 'Bree',
   moods: [
     'Chill',
@@ -10,19 +10,22 @@ const currentDog = {
     'assets/dogzoomies',
     'assets/dirtyhouse'
   ],
-  health: 5,
+  health: 100,
   pets: 0,
   moodIndex: 0
 }
 
-var health = 100
 
-const dogHealth = document.getElementById('health')
+const dogHealth = document.getElementById('dogHealth')
 
 function scratchEar() {
-  health--;
-  if (currentDog.scratchEar % currentDog.health == 0) {
-    currentDog.moodIndex--
-  }
-  return alert(health)
+  currentDog.health = currentDog.health - 1
+  dogHealth.innerHTML = currentDog.health.toString()
+}
+
+const brushTeeth = document.getElementById('brushTeeth')
+
+function brushTeeth() {
+  currentDog.health = currentDog.health - 1
+  dogHealth.innerHTML = currentDog.health.toString()
 }
