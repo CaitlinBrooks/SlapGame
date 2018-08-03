@@ -6,9 +6,9 @@ const currentDog = {
     'Zoomies'
   ],
   moodImgs: [
-    'assets/BlackDog.jpg',
-    'assets/DogZoomies',
-    ""
+    'assets/blackdog.jpg',
+    'assets/dogzoomies',
+    'assets/dirtyhouse'
   ],
   tolerance: 5,
   pets: 0,
@@ -16,10 +16,6 @@ const currentDog = {
 }
 
 var health = 100
-
-function slap() {
-
-}
 
 function pet() {
   currentDog.pets++;
