@@ -10,7 +10,7 @@ const currentDog = {
     'assets/dogzoomies',
     'assets/dirtyhouse'
   ],
-  tolerance: 5,
+  health: 5,
   pets: 0,
   moodIndex: 0
 }
@@ -18,11 +18,9 @@ const currentDog = {
 var health = 100
 
 function scratchEar() {
-  currentDog.scratchEar--;
-  if (currentDog.scratchEar % currentDog.tolerance == 0) {
+  health--;
+  if (currentDog.scratchEar % currentDog.health == 0) {
     currentDog.moodIndex--
   }
   return alert(health)
 }
-
-scratchEar();
