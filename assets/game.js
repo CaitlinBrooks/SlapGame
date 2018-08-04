@@ -14,7 +14,6 @@ let playerChoice = {
   moodIndex: 0
 }
 
-
 const playerHealth = document.getElementById('playerHealth')
 
 function slap() {
