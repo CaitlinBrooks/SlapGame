@@ -1,24 +1,23 @@
-let currentDog = {
-  name: 'Bree',
+let playerChoice = {
+  name: 'Mario',
   moods: [
-    'Chill',
-    'Excited',
-    'Zoomies'
+    'Healthy',
+    'Impaired',
+    'KO'
   ],
   moodImgs: [
-    'assets/blackdog.jpg',
-    'assets/dogzoomies',
-    'assets/dirtyhouse'
+    'assets/mario.png',
+    'assets/mariodefending.png',
+    'assets/gameover.jpg'
   ],
   health: 100,
-  pets: 0,
   moodIndex: 0
 }
 
 
-const dogHealth = document.getElementById('dogHealth')
+const playerHealth = document.getElementById('playerHealth')
 
-function scratchEar() {
-  currentDog.health = currentDog.health - 1
-  dogHealth.innerHTML = currentDog.health.toString()
+function slap() {
+  playerChoice.health = playerChoice.health - 1
+  playerHealth.innerHTML = playerChoice.health.toString()
 }
