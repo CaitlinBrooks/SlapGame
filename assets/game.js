@@ -22,10 +22,3 @@ function scratchEar() {
   currentDog.health = currentDog.health - 1
   dogHealth.innerHTML = currentDog.health.toString()
 }
-
-const brushTeeth = document.getElementById('brushTeeth')
-
-function brushTeeth() {
-  currentDog.health = currentDog.health - 1
-  dogHealth.innerHTML = currentDog.health.toString()
-}
