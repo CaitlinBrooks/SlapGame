@@ -11,11 +11,13 @@ let playerChoice = {
     'assets/gameover.jpg'
   ],
   health: 100,
+  hits: 0,
   moodIndex: 0
 }
 
-const playerHealth = document.getElementById('playerHealth')
-const playerMood = document.getElementById('playerMood')
+let playerHealth = document.getElementById('playerHealth')
+let Name = document.getElementById('Name')
+let playerHits = document.getElementById('playerHits')
 
 function slap() {
   playerChoice.health = playerChoice.health -= 1
@@ -31,3 +33,21 @@ function kick() {
   playerChoice.health = playerChoice.health -= 10
   playerHealth.innerHTML = playerChoice.health.toString()
 }
+
+function hit() {
+  playerChoice.hits = playerChoice.health += 1
+  playerHits.innerHTML = playerChoice.hits.toString()
+}
+
+// function hit() {
+//   playerChoice.hits = playerChoice.hits++
+//   playerHits.innerHTML = playerChoice.hits.toString()
+// }
+
+// function hit() {
+//   playerChoice.hits = playerChoice.hits =+ 1
+//   if (playerChoice.hits % playerChoice.hits == 0) {
+//   }
+//   hit()
+// }
+
