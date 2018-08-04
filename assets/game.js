@@ -15,8 +15,19 @@ let playerChoice = {
 }
 
 const playerHealth = document.getElementById('playerHealth')
+const playerMood = document.getElementById('playerMood')
 
 function slap() {
-  playerChoice.health = playerChoice.health - 1
+  playerChoice.health = playerChoice.health -= 1
+  playerHealth.innerHTML = playerChoice.health.toString()
+}
+
+function punch() {
+  playerChoice.health = playerChoice.health -= 5
+  playerHealth.innerHTML = playerChoice.health.toString()
+}
+
+function kick() {
+  playerChoice.health = playerChoice.health -= 10
   playerHealth.innerHTML = playerChoice.health.toString()
 }
