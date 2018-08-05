@@ -15,7 +15,6 @@ let playerChoice = {
   moodIndex: 0
 }
 
-
 let playerHealth = document.getElementById('playerHealth')
 let playerName = document.getElementById('playerName')
 let hits = document.getElementById('hits')
