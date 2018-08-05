@@ -17,11 +17,12 @@ let playerChoice = {
 
 let playerHealth = document.getElementById('playerHealth')
 let Name = document.getElementById('Name')
-let playerHits = document.getElementById('playerHits')
+let hits = document.getElementById('hits')
 
 function slap() {
   playerChoice.health = playerChoice.health -= 1
   playerHealth.innerHTML = playerChoice.health.toString()
+  hits.innerHTML = playerChoice.hits.toString()
 }
 
 function punch() {
@@ -34,10 +35,17 @@ function kick() {
   playerHealth.innerHTML = playerChoice.health.toString()
 }
 
-function hit() {
-  playerChoice.hits = playerChoice.health += 1
-  playerHits.innerHTML = playerChoice.hits.toString()
+function update() {
+  hits = document.getElementById('playerHits')
 }
+
+update()
+
+
+// function hit() {
+//   playerChoice.hits = playerChoice.health += 1
+//   hits.innerHTML = playerChoice.hits.toString()
+// }
 
 // function hit() {
 //   playerChoice.hits = playerChoice.hits++
