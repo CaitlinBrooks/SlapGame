@@ -22,6 +22,7 @@ let hits = document.getElementById('hits')
 function slap() {
   playerChoice.health = playerChoice.health -= 1
   playerHealth.innerHTML = playerChoice.health.toString()
+  playerChoice.hits = playerChoice.hits += 1
   hits.innerHTML = playerChoice.hits.toString()
 }
 
