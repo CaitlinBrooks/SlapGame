@@ -18,7 +18,7 @@ let playerChoice = {
 
 let playerHealth = document.getElementById('playerHealth')
 let playerName = document.getElementById('playerName')
-let hits = document.getElementById('hits')
+let hits = document.getElementById('playerHits')
 
 function slap() {
   playerChoice.health = playerChoice.health -= 1
@@ -48,7 +48,7 @@ function update() {
   hits = document.getElementById('playerHits')
 }
 
-update()
+update();
 
 
 // function hit() {
