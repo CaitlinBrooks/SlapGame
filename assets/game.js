@@ -15,8 +15,9 @@ let playerChoice = {
   moodIndex: 0
 }
 
+
 let playerHealth = document.getElementById('playerHealth')
-let Name = document.getElementById('Name')
+let playerName = document.getElementById('playerName')
 let hits = document.getElementById('hits')
 
 function slap() {
@@ -24,16 +25,23 @@ function slap() {
   playerHealth.innerHTML = playerChoice.health.toString()
   playerChoice.hits = playerChoice.hits += 1
   hits.innerHTML = playerChoice.hits.toString()
+  playerName.innerText = playerChoice.name
 }
 
 function punch() {
   playerChoice.health = playerChoice.health -= 5
   playerHealth.innerHTML = playerChoice.health.toString()
+  playerChoice.hits = playerChoice.hits += 1
+  hits.innerHTML = playerChoice.hits.toString()
+  playerName.innerText = playerChoice.name
 }
 
 function kick() {
   playerChoice.health = playerChoice.health -= 10
   playerHealth.innerHTML = playerChoice.health.toString()
+  playerChoice.hits = playerChoice.hits += 1
+  hits.innerHTML = playerChoice.hits.toString()
+  playerName.innerText = playerChoice.name
 }
 
 function update() {
