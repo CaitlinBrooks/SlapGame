@@ -14,21 +14,31 @@
 
 <body>
   <div>
-    <h1 class="display-3">Mario Slap</h1>
-    <p>Plumber fights back.</p>
+    <h1 class="display-3 ml-3">Mario Slap</h1>
   </div>
-  <div class="main-photo">
+  <div class="subtitle ml-4">
+    <p>Your chance to attack the world's most notable plumber.</p>
+  </div>
+  <div class="modifying-moves">
+
+  </div>
+  <div class="main-photo mod-buttons ml-3">
     <img src="/assets/mario.jpg" alt="playerChoice" style="width:200px">
+    <button type="button" class="btn btn-success ml-3">Spiral Spin</button>
+    <button type="button" class="btn btn-success">Cap Throw</button>
+    <button type="button" class="btn btn-success">Star Coins</button>
+  </div>
   </div>
   <br/>
-  <div button type="button" onclick="slap()" class="btn btn-primary mt-3 ">slap</button>
+  <div class="damage-buttons">
+    <div button type="button" onclick="slap()" class="btn btn-primary ml-4 mt-3">slap</button>
+    </div>
+    <div button type="button" onclick="punch()" class="btn btn-warning mt-3">punch</button>
+    </div>
+    <div button type="button" onclick="kick()" class="btn btn-danger mt-3">kick</button>
+    </div>
   </div>
-  <div button type="button" onclick="punch()" class="btn btn-warning mt-3 ">punch</button>
-  </div>
-  </div>
-  <div button type="button" onclick="kick()" class="btn btn-danger mt-3 ">kick</button>
-  </div>
-  <div class="row attributes col-md-6">
+  <div class="row attributes ml-3 col-md-6">
     <span>Health:
       <span id="playerHealth">--</span>
     </span>
