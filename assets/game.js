@@ -102,15 +102,11 @@ function kick() {
   playerName.innerText = target.name
 }
 
-
 function update() {
   hits = document.getElementById('playerHits')
 }
 
 update();
-
-// Math.floor(Math.random() * 100 + 1)
-
 
 // MOD VARIABLES
 // let spiralSpin = {
@@ -131,7 +127,6 @@ update();
 //   description: 'STARS!'
 // }
 
-
 // LEANING OUT HIT: TRIALS
 // function hit() {
 //   playerChoice.hits = playerChoice.health += 1
@@ -150,7 +145,19 @@ update();
 //   hit()
 // }
 
-// TO DO
-// 1. Limit to 100 and buttons disabled.
-// 2. reset button to beginning settings.
-// 3. readme2 better executed.
+// ATTEMPT TO LIMIT 100
+// let counter = 0;
+
+// function reset() {
+//   target.hits = 0
+//   target.moodIndex = 0
+//   hits.disabled = false
+//   update()
+// }
+
+// Math.floor(Math.random() * 100 + 1)
+
+// LEFT TO DO
+// - Limit to 100 and buttons disabled.
+// - reset button to beginning settings.
+// - readme2 better executed.
