@@ -43,6 +43,15 @@ let playerHealth = document.getElementById('playerHealth')
 let playerName = document.getElementById('playerName')
 let hits = document.getElementById('playerHits')
 
+// let runModTotal =
+
+// function addMods() {
+//   for (let i = 0; i < items.length; i++) {
+//     const runModTotal = items[i];
+//   }
+//   return 
+// }
+
 function slap() {
   target.health = target.health -= 1
   playerHealth.innerHTML = target.health.toString()
@@ -73,15 +82,6 @@ function kick() {
 function update() {
   hits = document.getElementById('playerHits')
 }
-
-// let runModTotal =
-
-// function addMods() {
-//   for (let i = 0; i < items.length; i++) {
-//     const runModTotal = items[i];
-//   }
-//   return 
-// }
 
 update();
 
