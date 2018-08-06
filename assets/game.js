@@ -149,3 +149,8 @@ update();
 //   }
 //   hit()
 // }
+
+// TO DO
+// 1. Limit to 100 and buttons disabled.
+// 2. reset button to beginning settings.
+// 3. readme2 better executed.
