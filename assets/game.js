@@ -12,8 +12,26 @@ let playerChoice = {
   ],
   health: 100,
   hits: 0,
-  moodIndex: 0
+  moodIndex: 0,
+  spiralSpin: 5
 }
+// {
+//   name: 'Luigi',
+//   moods: [
+//     'Healthy',
+//     'Impaired',
+//     'KO'
+//   ],
+//   moodImgs: [
+//     'assets/',
+//     'assets/',
+//     'assets/'
+//   ],
+//   health: 100,
+//   hits: 0,
+//   moodIndex: 0,
+//   capThrow: 4
+// }],
 
 
 let playerHealth = document.getElementById('playerHealth')
@@ -47,6 +65,26 @@ function kick() {
 function update() {
   hits = document.getElementById('playerHits')
 }
+
+
+var spiralSpin = {
+  name: 'spiralSpin',
+  modifier: 4,
+  description: 'SPIN!'
+}
+
+var capThrow = {
+  name: 'capThrow',
+  modifier: 6,
+  description: 'TAKE THAT!'
+}
+
+var starCoins = {
+  name: 'starCoins',
+  modifier: 2,
+  description: 'HELPFUL STARS!'
+}
+
 
 update();
 
