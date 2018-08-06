@@ -79,6 +79,15 @@ function kick() {
   playerName.innerText = target.name
 }
 
+function spiralSpin() {
+  target.health = target.health += 1
+  playerHealth.innerHTML = target.health.toString()
+  // target.health -= damage + addMods();
+  // target.hits = target.hits += 1
+  // hits.innerHTML = target.hits.toString()
+  playerName.innerText = target.name
+}
+
 function update() {
   hits = document.getElementById('playerHits')
 }
