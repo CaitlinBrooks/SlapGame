@@ -46,6 +46,7 @@ let hits = document.getElementById('playerHits')
 function slap() {
   target.health = target.health -= 1
   playerHealth.innerHTML = target.health.toString()
+  // target.health -= damage + addMods();
   target.hits = target.hits += 1
   hits.innerHTML = target.hits.toString()
   playerName.innerText = target.name
@@ -54,6 +55,7 @@ function slap() {
 function punch() {
   target.health = target.health -= 5
   playerHealth.innerHTML = target.health.toString()
+  // target.health -= damage + addMods();
   target.hits = target.hits += 1
   hits.innerHTML = target.hits.toString()
   playerName.innerText = target.name
@@ -62,6 +64,7 @@ function punch() {
 function kick() {
   target.health = target.health -= 10
   playerHealth.innerHTML = target.health.toString()
+  // target.health -= damage + addMods();
   target.hits = target.hits += 1
   hits.innerHTML = target.hits.toString()
   playerName.innerText = target.name
