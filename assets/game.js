@@ -1,4 +1,4 @@
-let playerChoice = {
+let target = {
   name: 'Mario',
   moods: [
     'Healthy',
@@ -13,7 +13,7 @@ let playerChoice = {
   health: 100,
   hits: 0,
   moodIndex: 0,
-  spiralSpin: 5
+  items: ['capThrow']
 }
 // {
 //   name: 'Luigi',
@@ -30,65 +30,82 @@ let playerChoice = {
 //   health: 100,
 //   hits: 0,
 //   moodIndex: 0,
-//   capThrow: 4
+//   items: ['spiralSpin']
 // }],
 
+let items = {
+  spiralSpin: { name: 'spiralSpin', modifier: 4, description: 'SPIN!' },
+  capThrow: { name: 'capThrow', modifier: 6, description: 'TAKE THAT!' },
+  starCoins: { name: 'starCoins', modifier: 2, description: 'STARS!' },
+}
 
 let playerHealth = document.getElementById('playerHealth')
 let playerName = document.getElementById('playerName')
 let hits = document.getElementById('playerHits')
 
 function slap() {
-  playerChoice.health = playerChoice.health -= 1
-  playerHealth.innerHTML = playerChoice.health.toString()
-  playerChoice.hits = playerChoice.hits += 1
-  hits.innerHTML = playerChoice.hits.toString()
-  playerName.innerText = playerChoice.name
+  target.health = target.health -= 1
+  playerHealth.innerHTML = target.health.toString()
+  target.hits = target.hits += 1
+  hits.innerHTML = target.hits.toString()
+  playerName.innerText = target.name
 }
 
 function punch() {
-  playerChoice.health = playerChoice.health -= 5
-  playerHealth.innerHTML = playerChoice.health.toString()
-  playerChoice.hits = playerChoice.hits += 1
-  hits.innerHTML = playerChoice.hits.toString()
-  playerName.innerText = playerChoice.name
+  target.health = target.health -= 5
+  playerHealth.innerHTML = target.health.toString()
+  target.hits = target.hits += 1
+  hits.innerHTML = target.hits.toString()
+  playerName.innerText = target.name
 }
 
 function kick() {
-  playerChoice.health = playerChoice.health -= 10
-  playerHealth.innerHTML = playerChoice.health.toString()
-  playerChoice.hits = playerChoice.hits += 1
-  hits.innerHTML = playerChoice.hits.toString()
-  playerName.innerText = playerChoice.name
+  target.health = target.health -= 10
+  playerHealth.innerHTML = target.health.toString()
+  target.hits = target.hits += 1
+  hits.innerHTML = target.hits.toString()
+  playerName.innerText = target.name
 }
 
 function update() {
   hits = document.getElementById('playerHits')
 }
 
+// let runModTotal =
 
-var spiralSpin = {
-  name: 'spiralSpin',
-  modifier: 4,
-  description: 'SPIN!'
-}
-
-var capThrow = {
-  name: 'capThrow',
-  modifier: 6,
-  description: 'TAKE THAT!'
-}
-
-var starCoins = {
-  name: 'starCoins',
-  modifier: 2,
-  description: 'HELPFUL STARS!'
-}
-
+// function addMods() {
+//   for (let i = 0; i < items.length; i++) {
+//     const runModTotal = items[i];
+//   }
+//   return 
+// }
 
 update();
 
+// Math.floor(Math.random() * 100 + 1)
 
+
+// MOD VARIABLES
+// let spiralSpin = {
+//   name: 'spiralSpin',
+//   modifier: 4,
+//   description: 'SPIN!'
+// }
+
+// let capThrow = {
+//   name: 'capThrow',
+//   modifier: 6,
+//   description: 'TAKE THAT!'
+// }
+
+// let starCoins = {
+//   name: 'starCoins',
+//   modifier: 2,
+//   description: 'STARS!'
+// }
+
+
+// LEANING OUT HIT: TRIALS
 // function hit() {
 //   playerChoice.hits = playerChoice.health += 1
 //   hits.innerHTML = playerChoice.hits.toString()
