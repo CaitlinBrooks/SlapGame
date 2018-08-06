@@ -11,6 +11,7 @@ let target = {
     'assets/images/gameover.jpg'
   ],
   health: 100,
+  maxHealth: 100,
   hits: 0,
   moodIndex: 0,
   items: ['capThrow']
@@ -57,26 +58,38 @@ let hits = document.getElementById('playerHits')
 //   return 
 // }
 
+function checkHealth() {
+  if (target.health > target.maxHealth) {
+    target.health = target.maxHealth
+  } else if (target.health < 0) {
+    target.health = 0
+  }
+}
+
 function spin() {
   target.health = target.health += 4
+  checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
 }
 
 function capThrow() {
   target.health = target.health += 6
+  checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
 }
 
 function starCoins() {
   target.health = target.health += 2
+  checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
 }
 
 function slap() {
   target.health = target.health -= 1
+  checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
   target.hits = target.hits += 1
@@ -86,6 +99,7 @@ function slap() {
 
 function punch() {
   target.health = target.health -= 5
+  checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
   target.hits = target.hits += 1
@@ -95,6 +109,7 @@ function punch() {
 
 function kick() {
   target.health = target.health -= 10
+  checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
   target.hits = target.hits += 1
@@ -102,11 +117,14 @@ function kick() {
   playerName.innerText = target.name
 }
 
-function update() {
-  hits = document.getElementById('playerHits')
-}
+hits = document.getElementById('playerHits')
 
-update();
+// function reset() {
+//   // hits = document.getElementById('playerHits')
+//   target.health = target.maxHealth;
+// }
+
+// reset();
 
 // MOD VARIABLES
 // let spiralSpin = {
@@ -145,19 +163,6 @@ update();
 //   hit()
 // }
 
-// ATTEMPT TO LIMIT 100
-// let counter = 0;
-
-// function reset() {
-//   target.hits = 0
-//   target.moodIndex = 0
-//   hits.disabled = false
-//   update()
-// }
-
-// Math.floor(Math.random() * 100 + 1)
-
 // LEFT TO DO
-// - Limit to 100 and buttons disabled.
 // - reset button to beginning settings.
-// - readme2 better executed.
+// - readme2 better executed -- dry code.
