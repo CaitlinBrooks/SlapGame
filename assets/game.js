@@ -119,11 +119,6 @@ function kick() {
 
 hits = document.getElementById('playerHits')
 
-// function reset() {
-//   // hits = document.getElementById('playerHits')
-//   target.health = target.maxHealth;
-// }
-
 // reset();
 
 // MOD VARIABLES
