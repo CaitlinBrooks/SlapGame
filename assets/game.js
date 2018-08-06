@@ -49,6 +49,7 @@ let playerHealth = document.getElementById('playerHealth')
 let playerName = document.getElementById('playerName')
 let hits = document.getElementById('playerHits')
 
+
 // let runModTotal =
 
 // function addMods() {
@@ -117,9 +118,12 @@ function kick() {
   playerName.innerText = target.name
 }
 
-hits = document.getElementById('playerHits')
-
-// reset();
+function reset() {
+  target.health = target.maxHealth;
+  playerHealth.innerHTML = target.health.toString()
+  target.hits = 0
+  hits.innerHTML = target.hits.toString()
+}
 
 // MOD VARIABLES
 // let spiralSpin = {
@@ -159,5 +163,6 @@ hits = document.getElementById('playerHits')
 // }
 
 // LEFT TO DO
-// - reset button to beginning settings.
-// - readme2 better executed -- dry code.
+// - reset button to beginning settings
+// - readme2 better executed
+// - utilize dry code
