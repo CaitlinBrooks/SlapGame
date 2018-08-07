@@ -49,8 +49,6 @@ let playerHealth = document.getElementById('playerHealth')
 let playerName = document.getElementById('playerName')
 let hits = document.getElementById('playerHits')
 
-
-
 function addMods() {
   let runModTotal = 0
   for (let i = 0; i < target.items.length; i++) {
