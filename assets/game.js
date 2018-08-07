@@ -104,9 +104,8 @@ function kick() {
 
 function reset() {
   target.health = target.maxHealth;
-  playerHealth.innerHTML = target.health.toString()
   target.hits = 0
-  hits.innerHTML = target.hits.toString()
+  update()
 }
 
 function update() {
