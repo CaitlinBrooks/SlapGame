@@ -14,7 +14,7 @@ let target = {
   maxHealth: 100,
   hits: 0,
   moodIndex: 0,
-  items: ['capThrow']
+  items: []
 }
 // {
 //   name: 'Luigi',
@@ -39,7 +39,7 @@ let target = {
 
 // let players = [mario, luigi]
 
-let items = {
+let availableItems = {
   spiralSpin: { name: 'spiralSpin', modifier: 4, description: 'SPIN!' },
   capThrow: { name: 'capThrow', modifier: 6, description: 'TAKE THAT!' },
   starCoins: { name: 'starCoins', modifier: 2, description: 'STARS!' },
@@ -50,14 +50,15 @@ let playerName = document.getElementById('playerName')
 let hits = document.getElementById('playerHits')
 
 
-// let runModTotal =
 
-// function addMods() {
-//   for (let i = 0; i < items.length; i++) {
-//     const runModTotal = items[i];
-//   }
-//   return 
-// }
+function addMods() {
+  let runModTotal = 0
+  for (let i = 0; i < target.items.length; i++) {
+    const item = target.items[i];
+    runModTotal += item.modifier
+  }
+  return runModTotal
+}
 
 function checkHealth() {
   if (target.health > target.maxHealth) {
@@ -68,54 +69,39 @@ function checkHealth() {
 }
 
 function spin() {
-  target.health = items.spin.modifier
-  checkHealth()
-  playerHealth.innerHTML = target.health.toString()
-  // target.health -= damage + addMods();
+  target.items.push(availableItems.spiralSpin)
 }
 
 function capThrow() {
-  target.health = items.capThrow.modifier
-  checkHealth()
-  playerHealth.innerHTML = target.health.toString()
-  // target.health -= damage + addMods();
+  target.items.push(availableItems.capThrow)
 }
 
 function starCoins() {
-  target.health = items.starCoins.modifier
-  checkHealth()
-  playerHealth.innerHTML = target.health.toString()
-  // target.health -= damage + addMods();
+  target.items.push(availableItems.starCoins)
 }
 
 function slap() {
-  target.health = target.health -= 1
+  target.health -= 1 - addMods()
+  target.items = []
   checkHealth()
-  playerHealth.innerHTML = target.health.toString()
-  // target.health -= damage + addMods();
-  target.hits = target.hits += 1
-  hits.innerHTML = target.hits.toString()
-  playerName.innerText = target.name
+  target.hits += 1
+  update()
 }
 
 function punch() {
-  target.health = target.health -= 5
+  target.health -= 5 - addMods()
+  target.items = []
   checkHealth()
-  playerHealth.innerHTML = target.health.toString()
-  // target.health -= damage + addMods();
-  target.hits = target.hits += 1
-  hits.innerHTML = target.hits.toString()
-  playerName.innerText = target.name
+  target.hits += 1
+  update()
 }
 
 function kick() {
-  target.health = target.health -= 10
+  target.health -= 10 - addMods()
+  target.items = []
   checkHealth()
-  playerHealth.innerHTML = target.health.toString()
-  // target.health -= damage + addMods();
-  target.hits = target.hits += 1
-  hits.innerHTML = target.hits.toString()
-  playerName.innerText = target.name
+  target.hits += 1
+  update()
 }
 
 function reset() {
@@ -123,6 +109,12 @@ function reset() {
   playerHealth.innerHTML = target.health.toString()
   target.hits = 0
   hits.innerHTML = target.hits.toString()
+}
+
+function update() {
+  playerHealth.innerHTML = target.health.toString()
+  hits.innerHTML = target.hits.toString()
+  playerName.innerText = target.name
 }
 
 // MOD VARIABLES
@@ -163,9 +155,8 @@ function reset() {
 // }
 
 // LEFT TO DO
-// - reset button to beginning settings
 // - readme2 better executed
-// - utilize dry code
+// - simplify using functions
 
 
 
