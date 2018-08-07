@@ -68,21 +68,21 @@ function checkHealth() {
 }
 
 function spin() {
-  target.health = target.health += 4
+  target.health = items.spin.modifier
   checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
 }
 
 function capThrow() {
-  target.health = target.health += 6
+  target.health = items.capThrow.modifier
   checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
 }
 
 function starCoins() {
-  target.health = target.health += 2
+  target.health = items.starCoins.modifier
   checkHealth()
   playerHealth.innerHTML = target.health.toString()
   // target.health -= damage + addMods();
@@ -166,3 +166,6 @@ function reset() {
 // - reset button to beginning settings
 // - readme2 better executed
 // - utilize dry code
+
+
+
