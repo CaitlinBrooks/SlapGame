@@ -1,7 +1,7 @@
 # SlapGame
 
 <strong>About</strong><br/>
-This is a description for the first project from Boise CodeWorks, the slap game.<br/>
+This is the first checkpoint and major project from Boise CodeWorks. This is a quick game where the user can click a variety of buttons to either harm Mario or provide him with defenses against harm. Once Mario's health of 100 has depleted to 0, the game is over.<br/>
 
 <strong>Getting Started</strong><br/>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.<br/>
