@@ -41,7 +41,7 @@ let target = {
 
 let availableItems = {
   spiralSpin: { name: 'spiralSpin', modifier: 4, description: 'SPIN!' },
-  capThrow: { name: 'capThrow', modifier: 6, description: 'TAKE THAT!' },
+  capThrow: { name: 'capThrow', modifier: 6, description: 'CAP THROWN!' },
   starCoins: { name: 'starCoins', modifier: 2, description: 'STARS!' },
 }
 
